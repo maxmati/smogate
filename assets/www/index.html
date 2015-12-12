@@ -8,23 +8,27 @@
     <link rel="stylesheet" type="text/css" href="css/mapa.css" />
     <script src="libs/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="libs/jquery.mobile.custom.min.js"></script>
-    <script type="text/javascript" src="gmap3/gmap3.min.js"></script>
+    <!-- <script type="text/javascript" src="gmap3/gmap3.min.js"></script> -->
     <title>Smogathon</title>
     <script>
         $(document).ready(function () {
-            $("#mapa").gmap3();
-            $("#mapa").gmap3({
-                map: {
-                    options: {
-                        disableDefaultUI: true,
-                        center: [50.0487225, 19.9600163],
-                        zoom: 2
-                    }
-                }
-            })
+            // $("#mapa").gmap3();
+            // $("#mapa").gmap3({
+            //     map: {
+            //         options: {
+            //             disableDefaultUI: true,
+            //             center: [50.0487225, 19.9600163],
+            //             zoom: 2
+            //         }
+            //     }
+            // })
 
             $("#btn2").tap(function () {
                 $("#panel").toggleClass("wysun");
+            })
+
+            $("#btn1").tap(function () {
+              window.location.href = "history.html";
             })
 
 

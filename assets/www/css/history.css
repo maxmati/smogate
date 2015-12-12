@@ -1,0 +1,69 @@
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background: #1B252F;
+    color: white;
+    height: 100vh;
+}
+
+
+.history_entry_data {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.history_entry {
+  padding-left: 40px;
+  padding: 20px;
+  display: flex;
+  border-top: 1px solid lightgray;
+}
+
+#history_list_container {
+  height: 93%;
+  overflow: scroll;
+}
+#history_header {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 47pt;
+}
+.progress {
+    height: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    transition: width .6s ease;
+}
+
+.history_entry_date, .history_entry_amount {
+  color: white;
+}
+
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
