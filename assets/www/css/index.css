@@ -1,0 +1,79 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75%;
+    background-color: #3498db;
+}
+
+#human{
+    margin: 0 auto;
+    position: absolute;
+    top: 20%;;
+    left: 13%;;
+}
+
+#subwindow{
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 20%;
+    background-color: #f39c12;
+}
+
+#toolbar{
+    margin: 0;
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    height: 20%;
+    background-color: #34495e;
+}
+
+#btn0{
+    display: inline-block;
+    width: 32%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    
+    font-size: 30px;
+    color: #f39c12;
+}
+
+#btn1{
+    display: inline-block;
+    width: 32%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    
+    font-size: 30px;
+    color: #f39c12;
+}
+
+#btn2{
+    display: inline-block;
+    width: 32%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    
+    font-size: 30px;
+    color: #f39c12;
+}
