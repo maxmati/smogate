@@ -28,10 +28,15 @@ body{
     position:absolute;
     top: 12%;
     z-index: 1;
-
+    height: 75%;
+    background-color: #1B252F;
 }
 
-#human{
+#dragon-overlay{
+  clip: rect(0px,504px,452px,0px);
+  transition: clip 2s;
+}
+.dragon{
     margin: 0 auto;
     position: absolute;
     top: 20%;
@@ -111,7 +116,6 @@ body{
     padding-top: 15px;
     text-align: center;
     font-family: OpenSans-Regular;
-    
     font-size: 30px;
     color: #ffffff;
 }
@@ -123,7 +127,6 @@ body{
     padding-top: 15px;
     text-align: center;
     font-family: OpenSans-Regular;
-    
     font-size: 30px;
     color: #ffffff;
 }
