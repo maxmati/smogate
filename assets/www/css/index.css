@@ -1,7 +1,10 @@
 @font-face {
     font-family: OpenSans-Regular;
     src: url(../fonts/OpenSans-Regular.ttf);
+        font-family: OpenSans-Light;
+    src: url(../fonts/OpenSans-Light.ttf);
 }
+
 
 body{
     margin: 0 auto;
@@ -36,10 +39,14 @@ body{
   font-size: 38pt;
   color: #d63b38;
   opacity: 0;
+  font-family: OpenSans-Light;
+  color: white;
   transition: opacity 3s;
+  -webkit-transition: opacity 3s;
 }
 #dragon-overlay{
   clip: rect(0px,504px,452px,0px);
+  -webkit-transition: clip 1s;
   transition: clip 1s;
 }
 .dragon{
@@ -63,6 +70,7 @@ body{
   font-size: 22pt;
   z-index: 20;
   transition: top 1s, color 1s;
+  -webkit-transition: top 1s, color 1s;
 }
 #subwindow{
     margin: 0;

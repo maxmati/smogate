@@ -165,7 +165,7 @@
               setCurrentAmount(overlay);
               if(times < 24){
                 times++;
-                setTimeout(add, 3000);
+                setTimeout(add, 1500);
               }
             };
             add();
@@ -176,9 +176,9 @@
     <div id="content">
 
       <div id="main">
-        <p id="dragon-warning">Dzisiaj jest bardzo zły dzień</p>
+        <p id="dragon-warning">Dziś jest bardzo zły dzień</p>
         <img class="dragon" src="img/dragon-colored.png"/>
-        <img id="dragon-overlay" class="dragon" src="img/dragon.png"/>
+        <img id="dragon-overlay" class="dragon" src="img/Dragon.png"/>
 
         <img id="background" src="img/Colour BackGround.png"/>
         <p id="amount_scale"> 1000µg</p>
@@ -244,9 +244,9 @@
         <div id="day"></div>
 
         <div id="toolbar">
-            <div id="btn0"><img id="stat" src="img/stat_color_icon_map.png"/><p style="color: white">Statystyki</p></div>
-            <div id="btn1"><img id="hist" src="img/history_color_icon_map.png"/><p style="color: white">Historia</p></div>
-            <div id="btn2"><img id="map" src="img/map_color_icon_map.png"/><p style="color: white">Mapa</p></div>
+            <div id="btn0" class="buttonselected"><img id="stat" src="img/stat_white_icon_map.png" /><p style="color: white">Statystyki</p></div>
+            <div id="btn1"><img id="hist" src="img/history_white_icon_map.png"/><p style="color: white">Historia</p></div>
+            <div id="btn2"><img id="map" src="img/map_white_icon_map.png"/><p style="color: white">Mapa</p></div>
         </div>
     </div>
     <script type="text/javascript" src="js/data.js"></script>

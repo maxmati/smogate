@@ -1,3 +1,8 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
 #login_main {
   height: 80%;
   background-color: yellow;
@@ -12,25 +17,27 @@
   margin-left: -49px;
 }
 
+#login_main img {
+    display: block;
+}
+
 #login_main > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   height: 100%;
-  flex-direction: column;
+      position: relative;
+    top: 300px;
+    left: 203px;
 }
 
 #middle {
   height: 5%;
-  font-size: 27pt;
-  display: flex;
+  font-size: 30px;
+  font-family: OpenSans-Regular;
   justify-content: center;
   color: rgba(255, 255, 255, 0.7);
 }
 #buttons {
   height: 15%;
-  display: flex;
-  justify-content: space-around;
 }
 #buttons img{
   height: 142px;
