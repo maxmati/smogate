@@ -44,9 +44,11 @@
             $("#btn1").tap(function () {
                 $("#panel2").toggleClass("wysun2");
             })
-            var dataset = [[[0, 0]]];
+            var dataset = [[]];
             var hour = 0;
-            var myplot = $.jqplot('chartdiv',
+
+            function generatePlot() {
+              return $.jqplot('chartdiv',
                     dataset,
                     {
                         seriesColors: ["rgba(255, 255, 255, 1)"],
@@ -87,7 +89,7 @@
                             },
                             yaxis: {
                                 renderer: $.jqplot.LogAxisRenderer,
-                                ticks: [0, 500, 1000, 1500, 2000],
+                                ticks: [0, 50, 100, 150, 200],
                                 // pad: 1,
                                 rendererOptions: {
                                     minorTicks: 1
@@ -102,22 +104,33 @@
                             }
                         }
                     }
-            );
+                  );
+                }
+                var myplot;
             function addOne(dpoint) {
                 dataset[0].push([hour, dpoint]);
-                myplot.series[0].data = dataset[0];
+                if(myplot){
+                  myplot.series[0].data = dataset[0];
+                  myplot.replot();
+                }else{
+                  myplot = generatePlot();
+                }
                 hour += 1;
-                myplot.replot();
-                
             }
-            for (var i = 0; i < 24; i++) {
-                addOne(Math.random()*2000);
-            }
+
             var overlay = 0;
-            setInterval(function(){
-              overlay += Math.round(Math.random()*300);
+            var times = 0;
+            function add(){
+              var newd = Math.round(Math.random()*200);
+              addOne(newd);
+              overlay += newd;
               setCurrentAmount(overlay);
-            }, 2000);
+              if(times < 24){
+                times++;
+                setTimeout(add, 3000);
+              }
+            };
+            add();
         })
     </script>
 </head>
@@ -127,7 +140,6 @@
       <div id="main">
         <p id="dragon-warning">Dzisiaj jest bardzo zły dzień</p>
         <img class="dragon" src="img/dragon-colored.png"/>
-        <div id="chartdiv"></div>
         <img id="dragon-overlay" class="dragon" src="img/dragon.png"/>
 
         <img id="background" src="img/Colour BackGround.png"/>
@@ -135,6 +147,7 @@
         <img id="skala" src="img/div_timeline.png"/>
       </div>
       <div id="subwindow">
+        <div id="chartdiv"></div>
         <table id="wykres">
             <colgroup>
                 <col />
