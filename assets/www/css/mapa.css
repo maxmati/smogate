@@ -7,7 +7,6 @@
     width: 100%;
     height: 100%;
     z-index: 3;
-    
 
     position: fixed;
     left: 0;
@@ -34,21 +33,25 @@
      width: 100%;
      height: 5%;
      margin: 0 auto;
-     background-color: #34495e;
+     padding: 3%;
+     background-color: #1B252F;
      font-size: 30px;
+     border-bottom: 2px solid #3d4e5f; 
+     z-index: 4;
  }
 
  #body{
      position: absolute;
-     top: 5%;
+     top: 8%;
      width: 100%;
      height: 95%;
      margin: 0 auto;
-     background-color: #3498db;
+     background-image:url(../img/map.png);
+     z-index: 3;
  }
 
  p{
-     color: #f39c12;
+     color: white;
      text-align: center;
      font-family: OpenSans-Regular;
      margin-top: 13px;
