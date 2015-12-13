@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,26 +12,39 @@
     <script type="text/javascript" src="libs/jquery.jqplot.js"></script>
     
     <!-- <script type="text/javascript" src="gmap3/gmap3.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/history.css" />
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.mobile.custom.min.js"></script>
+    <script type="text/javascript" src="gmap3/gmap3.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&language=pl"></script>
     <title>Smogathon</title>
     <script>
         $(document).ready(function () {
-            // $("#mapa").gmap3();
-            // $("#mapa").gmap3({
-            //     map: {
-            //         options: {
-            //             disableDefaultUI: true,
-            //             center: [50.0487225, 19.9600163],
-            //             zoom: 2
-            //         }
-            //     }
-            // })
+            /*$("#mapa").gmap3();
+            $("#mapa").gmap3({
+                map: {
+                    options: {
+                        disableDefaultUI: true,
+                        center: [50.0487225, 19.9600163],
+                        zoom: 2
+                    }
+                }
+            })*/
 
             $("#btn2").tap(function () {
                 $("#panel").toggleClass("wysun");
             })
 
+            $("#content").swipeleft(function () {
+                $("#panel").toggleClass("wysun");
+            })
+
+            $("#panel").swiperight(function () {
+                $("#panel").toggleClass("wysun");
+            })
+
             $("#btn1").tap(function () {
-              window.location.href = "history.html";
+                $("#panel2").toggleClass("wysun2");
             })
             $.jqplot('chartdiv', 
                 [[[0, 2.8389651118174895], [1, 1.874618022997241], [2, 1.0563099361955008], [3, 1.7726516369023448], [4, 2.705276116860198], [5, 3.33240922910556], [6, 2.7793028731452516], [7, 2.58966684336008], [8, 2.1000544867789435], [9, 2.385058131964415], [10, 2.517529293589895], [11, 3.0734720494718486], [12, 3.4963263382004692], [13, 3.1430309338490634], [14, 3.2298589830199442], [15, 3.8990988894975938], [16, 4.330103101645756], [17, 4.9515210068069715], [18, 4.9164271424682005], [19, 5.3299991869132235], [20, 4.3474859134951], [21, 4.852000283529566], [22, 4.927004129839067], [23, 4.205173963514033], [24, 3.87670088206957], [25, 4.442429525248395], [26, 4.632866537062444], [27, 4.722801768604139], [28, 4.205708021900794], [29, 4.139211421829163], [30, 4.14377988858004], [31, 3.396828401429196], [32, 3.659673966618822], [33, 4.149914805601183], [34, 4.258434255914593], [35, 3.835529112036941], [36, 3.1003831904502235], [37, 3.5097129713418056], [38, 2.787392978344048], [39, 3.541863989412466], [40, 3.176025746510585], [41, 3.9445335811572697], [42, 3.692953128331931], [43, 4.063920057927695], [44, 4.91681680275064], [45, 5.022152335835933], [46, 4.340961988987344], [47, 3.352678787366515], [48, 3.635028405522169], [49, 3.9352324536997374], [50, 4.0668734114639005], [51, 3.749313017386594], [52, 3.3861600112421497], [53, 4.312100437950573], [54, 3.413869101842013], [55, 3.2416777645959556], [56, 4.171412265020962], [57, 4.005405979128591], [58, 4.81543230843612], [59, 3.944688316049449], [60, 3.637693606358075], [61, 4.399298843951218], [62, 3.8487495724025553], [63, 4.771994557047956], [64, 5.4234440538658975], [65, 6.108646070712479], [66, 6.666438757573913], [67, 6.022545423978172], [68, 5.738441049564931], [69, 5.760414493268071], [70, 5.342111074350927], [71, 5.440476167515291], [72, 5.356392240859594], [73, 4.603858527138827], [74, 3.7675314975864476], [75, 4.622458025798621], [76, 4.555922054982275], [77, 3.569379556803616], [78, 4.379620015036089], [79, 4.705144997591647], [80, 3.9120545875414745], [81, 3.313846709859506], [82, 2.878437764139446], [83, 2.106899382925631], [84, 1.6076294247080336], [85, 0.7671868356458544], [86, 1.0130162290458358], [87, 1.311897020105183], [88, 2.091786709742747], [89, 1.5273697565093263], [90, 1.6534486043086232], [91, 2.622442866366625], [92, 2.90280532733], [93, 2.1834073540434096], [94, 2.213860483252356], [95, 1.5755518560486097]]]
@@ -93,21 +106,73 @@
 <body>
     <div id="content">
         <div id="main">
-            <img id="human" src="img/user82.png"/>
-            <!--<div id="chartdiv"></div>-->
-        </div>
 
+            <div id="chartdiv"></div>
+
+            <img id="human" src="img/Colours.png"/>
+            <img id="background" src="img/Colour BackGround.png"/>
+            <img id="skala" src="img/div_timeline.png"/>
+        </div>
         <div id="subwindow">
+            <table id="wykres">
+                <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                </colgroup>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
 
         <div id="panel">
-            <div id="mapa"></div>
+            <div id="header">
+                <p>Trasa wycieczki</p>
+            </div>
+
+            <div id="body">
+
+            </div>
+        </div>
+
+        <div id="panel2">
+            <div id="header2">
+
+            </div>
+
+            <div id="body2">
+
+            </div>
         </div>
 
         <div id="toolbar">
-            <div id="btn0">Statystyki</div>
-            <div id="btn1">Historia</div>
-            <div id="btn2">Mapa</div>
+            <div id="btn0"><img id="stat" src="img/stat_color_icon_map.png"/><p style="color: white">Statystyki</p></div>
+            <div id="btn1"><img id="hist" src="img/history_color_icon_map.png"/><p style="color: white">Historia</p></div>
+            <div id="btn2"><img id="map" src="img/map_color_icon_map.png"/><p style="color: white">Mapa</p></div>
         </div>
     </div>
     <!--<script type="text/javascript" src="cordova.js"></script>-->
