@@ -7,4 +7,4 @@ var entries = [
   {id: 16, amount: 34, date: "5.11.2015"}, {id: 17, amount: 23, date: "6.11.2015"}, {id: 18, amount: 76, date: "7.11.2015"}
 ];
 
-var maxAmount = 50;
+var maxAmount = 2000;

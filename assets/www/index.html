@@ -101,9 +101,9 @@
 
             var overlay = 0;
             setInterval(function(){
-              overlay +=4;
+              overlay += Math.round(Math.random()*300);
               setCurrentAmount(overlay);
-            }, 4000);
+            }, 2000);
         })
     </script>
 </head>
@@ -111,10 +111,12 @@
     <div id="content">
 
       <div id="main">
+        <p id="dragon-warning">Dzisiaj jest bardzo zły dzień</p>
         <img class="dragon" src="img/dragon-colored.png"/>
         <img id="dragon-overlay" class="dragon" src="img/dragon.png"/>
 
         <img id="background" src="img/Colour BackGround.png"/>
+        <p id="amount_scale"> 1000µg</p>
         <img id="skala" src="img/div_timeline.png"/>
       </div>
       <div id="subwindow">
