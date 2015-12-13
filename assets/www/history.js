@@ -28,7 +28,7 @@
 
   function addHistoryEntry(entry) {
     var percentageAmount = Math.min(entry.amount/maxAmount, 1);
-    insertTemplate("templates/history_entry.html", {date:entry.date, color:calculateColor(percentageAmount), value:entry.amount, progress: percentageAmount * 100, id: entry.id}, "history_list");
+    insertTemplate("templates/history_entry.html", {day:entry.day, month:entry.month, year:entry.year, px:percentageAmount*720, value:entry.amount, id: entry.id}, "history_list");
   }
 
   function generateHistory(data) {

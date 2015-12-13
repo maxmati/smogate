@@ -15,11 +15,52 @@ body {
   text-decoration: none;
 }
 
+.history-progress-bar{
+  height: 20px;
+  background-color: #253341;
+  margin-top: 7px;
+  position: relative;
+}
+
+.history-progress-bar > img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
 .history_entry {
   padding-left: 40px;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
+  flex-direction: column;
   border-top: 1px solid lightgray;
+}
+.history_date {
+  display: flex;
+}
+.history_day{
+  font-size: 39pt;
+  margin-top: -5px;
+}
+.history_amount{
+  font-size: 39pt;
+}
+.history_my{
+  font-size: 17pt;
+}
+.history_data {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #history_list_container {
