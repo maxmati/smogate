@@ -32,10 +32,15 @@ body{
     height: 75%;
     background-color: #1B252F;
 }
-
+#dragon-warning{
+  font-size: 38pt;
+  color: #d63b38;
+  opacity: 0;
+  transition: opacity 3s;
+}
 #dragon-overlay{
   clip: rect(0px,504px,452px,0px);
-  transition: clip 2s;
+  transition: clip 1s;
 }
 .dragon{
     margin: 0 auto;
@@ -51,7 +56,14 @@ body{
     right: 1%;
     z-index: 2;
 }
-
+#amount_scale{
+  display: inline-block;
+  left: 77%;
+  position: relative;
+  font-size: 22pt;
+  z-index: 20;
+  transition: top 1s, color 1s;
+}
 #subwindow{
     margin: 0;
     position: absolute;
@@ -77,6 +89,11 @@ body{
     min-height: 33%;
     padding: 0;
 }
+.jqplot-target{
+  position: absolute !important;
+  width: 100% !important;
+  z-index: 20;
+}
 
 
 
@@ -96,7 +113,7 @@ body{
     height: 12%;
     background-color: #1b252f;
     border-top: 2px solid #3d4e5f;
-    z-index: 4;
+    z-index: 3020;
 }
 
 .buttonselected{

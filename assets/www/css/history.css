@@ -19,23 +19,77 @@ body {
   text-decoration: none;
 }
 
+.history-progress-bar{
+  height: 20px;
+  background-color: #253341;
+  margin-top: 7px;
+  position: relative;
+}
+
+.history-progress-bar > img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
 .history_entry {
   padding-left: 40px;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
-  border-top: 1px solid lightgray;
+  flex-direction: column;
+  border-top: 1px dotted rgba(97,105,113,0.5);
+}
+.history_date {
+  display: flex;
+}
+.history_day{
+  font-size: 39pt;
+  margin-top: -9px;
+}
+.history_amount{
+  font-size: 39pt;
+}
+.history_my{
+  font-size: 14pt;
+}
+.history_data {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #history_list_container {
   height: 93%;
   overflow: scroll;
+  background-color: #1B252F;
+  z-index: 3000;
 }
-#history_header {
-  height: 7%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 47pt;
+#header2{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: #1B252F;
+    font-size: 30px;
+    font-family: OpenSans-Regular;
+    border-bottom: 2px solid #3d4e5f; 
+    z-index: 4;
+}
+
+#history_listy{
+    font-family: OpenSans-Regular;
 }
 .progress {
     height: 20px;
@@ -63,14 +117,13 @@ body {
 }
 
 
-p1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
+/*font-size:30px;
+    
+
     overflow:visible;
     padding:0px;
     text-align:center;
-}
+}*/
 
 #panel2 {
     width: 100%;

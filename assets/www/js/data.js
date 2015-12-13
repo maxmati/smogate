@@ -1,10 +1,22 @@
 var entries = [
-  {id: 1, amount: 15, date: "21.10.2015"}, {id: 2, amount: 23, date: "22.10.2015"}, {id: 3, amount: 43, date: "23.10.2015"},
-  {id: 4, amount: 55, date: "24.10.2015"}, {id: 5, amount: 10, date: "25.10.2015"}, {id: 6, amount: 50, date: "26.10.2015"},
-  {id: 7, amount: 48, date: "27.10.2015"}, {id: 8, amount: 18, date: "28.10.2015"}, {id: 9, amount: 34, date: "29.10.2015"},
-  {id: 10, amount: 70, date: "30.10.2015"}, {id: 11, amount: 23, date: "31.10.2015"}, {id: 12, amount: 34, date: "1.11.2015"},
-  {id: 13, amount: 32, date: "2.11.2015"}, {id: 14, amount: 43, date: "3.11.2015"}, {id: 15, amount: 12, date: "4.11.2015"},
-  {id: 16, amount: 34, date: "5.11.2015"}, {id: 17, amount: 23, date: "6.11.2015"}, {id: 18, amount: 76, date: "7.11.2015"}
+  {id: 1, amount: 1345, day: 21, month: 10, year: 15},
+  {id: 2, amount: 1900, day: 22, month: 10, year: 15},
+  {id: 3, amount: 2200, day: 23, month: 10, year: 15},
+  {id: 4, amount: 500, day: 24, month: 10, year: 15},
+  {id: 5, amount: 300, day: 25, month: 10, year: 15},
+  {id: 6, amount: 425, day: 26, month: 10, year: 15},
+  {id: 7, amount: 130, day: 27, month: 10, year: 15},
+  {id: 8, amount: 700, day: 28, month: 10, year: 15},
+  {id: 9, amount: 432, day: 29, month: 10, year: 15},
+  {id: 10, amount: 341, day: 30, month: 10, year: 15},
+  {id: 11, amount: 654, day: 31, month: 10, year: 15},
+  {id: 12, amount: 543, day: "01", month: 11, year: 15},
+  {id: 13, amount: 987, day: "02", month: 11, year: 15},
+  {id: 14, amount: 656, day: "03", month: 11, year: 15},
+  {id: 15, amount: 765, day: "04", month: 11, year: 15},
+  {id: 16, amount: 123, day: "05", month: 11, year: 15},
+  {id: 17, amount: 765, day: "06", month: 11, year: 15},
+  {id: 18, amount: 76, day: "07", month: 11, year: 15}
 ];
 
-var maxAmount = 50;
+var maxAmount = 2000;
